@@ -4,7 +4,8 @@ const initialState = {
     products:[
         {
             id:1,
-            title: "Summer Collection"
+            title: "Summer Collection",
+            price: "$456"
         }
     ]
 }
