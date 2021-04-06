@@ -1,0 +1,5 @@
+@media only screen and (min-width: 320px){
+.ui.grid.container {
+    margin-top: 80px;
+}
+}

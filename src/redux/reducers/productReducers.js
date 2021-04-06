@@ -4,7 +4,7 @@ const initialState = {
     products:[
         {
             id:1,
-            name: "Muskaan"
+            title: "Summer Collection"
         }
     ]
 }

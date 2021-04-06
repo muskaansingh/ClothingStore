@@ -6,16 +6,17 @@ import ProductDetails from './Components/ProductDetails';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <Header/>
         <Router>
-          <Header/>
             <Switch>
               <Route path="/" exact component={ProductListing}/>
               <Route path="/product/:productId" exact component={ProductDetails}/>
               <Route>404 not found!</Route>
             </Switch>
         </Router>
-    </div>
+    </>
+
   );
 }
 
