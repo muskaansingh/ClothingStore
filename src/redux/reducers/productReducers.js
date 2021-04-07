@@ -26,6 +26,7 @@ export const selectedProductDetails = (state={}, {type,payload}) => {
             ...state,
             ...payload
         };
+        case actionTypes.REMOVE_SELECTED_PRODUCT: return { };
         default: return state;
     }
 }
