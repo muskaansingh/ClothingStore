@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
-import './styles.css';
+import './styles.css';  
 
 const ProductComponent = () => {
     const products = useSelector((state) => state.allProducts.products);
@@ -10,6 +11,7 @@ const ProductComponent = () => {
         const {id, title, price, category,image} = product
         return(
             <div className="four wide column" key={id}>
+            <Link to={`/product/${id}`}>
                 <div className="ui link cards">
                     <div className="card">
                         <div className="image">
@@ -22,6 +24,7 @@ const ProductComponent = () => {
                         </div>
                     </div>
                 </div>
+            </Link>
             </div>
         )
     });
