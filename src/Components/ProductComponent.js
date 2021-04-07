@@ -1,8 +1,10 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import './styles.css';
 
 const ProductComponent = () => {
     const products = useSelector((state) => state.allProducts.products);
+
 
     const RenderList = products.map((product) => {
         const {id, title, price, category,image} = product

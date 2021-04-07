@@ -3,3 +3,11 @@
     margin-top: 80px;
 }
 }
+
+.ui.card>.image>img, .ui.cards>.card>.image>img {
+    height: 300px;
+}
+
+.ui.cards>.card>.content>.header:not(.ui) {
+    height: 140px;
+}
