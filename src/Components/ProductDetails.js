@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectedProducts, removeselectedProducts } from '../redux/actions/productActions';
 
+
 const ProductDetails = () => {  
     const product = useSelector((state) => state.selectedProduct)
     const {image, description, title, price, category} = product;
@@ -29,6 +30,7 @@ const ProductDetails = () => {
             dispatch(removeselectedProducts());
         }
     }, [productId]);
+
 
     return (
         <div className="ui grid container">
@@ -65,4 +67,11 @@ const ProductDetails = () => {
     )
 }
 
-export default ProductDetails
+export default ProductDetails;
+
+
+
+
+  
+
+  
