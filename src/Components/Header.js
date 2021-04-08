@@ -16,13 +16,14 @@ const StyledBadge = withStyles((theme) => ({
     },
   }))(Badge);
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
     icon: {
       marginRight: theme.spacing(55),
-      color: "white"
+      color: "white",
     },
     title: {
       flexGrow: 1,
@@ -42,9 +43,9 @@ const Header = () => {
                         </Typography>
 
                         <IconButton aria-label="cart" className={classes.icon}>
-                        <StyledBadge badgeContent={4} color="secondary">
-                            <ShoppingCartIcon />
-                        </StyledBadge>
+                            <StyledBadge badgeContent={4} color="secondary">
+                                <ShoppingCartIcon />
+                            </StyledBadge>
                         </IconButton>
  
                     </Toolbar>
