@@ -1,13 +1,14 @@
 import React, {useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectedProducts, removeselectedProducts } from '../redux/actions/productActions';
 
 
 const ProductDetails = () => {  
+    const history = useHistory();
     const product = useSelector((state) => state.selectedProduct)
-    const {image, description, title, price, category} = product;
+    const {image, description, title, price, category, id} = product;
     const dispatch = useDispatch();
     const {productId} = useParams();
     console.log(product);  // displays the particular id details on the console
@@ -31,6 +32,11 @@ const ProductDetails = () => {
         }
     }, [productId]);
 
+    
+    const addToCart = () => { 
+        console.log("cart");
+        history.push(`/product/:${id}/cart/`);
+}
 
     return (
         <div className="ui grid container">
@@ -51,12 +57,12 @@ const ProductDetails = () => {
                                 </h2>
                                 <h3 className="ui brown block header">{category}</h3>
                                 <p>{description}</p>
-                                <div className="ui vertical animated button" tabIndex="0">
+                                <button className="ui vertical animated button" tabIndex="0" onClick={addToCart}>
                                     <div className="hidden content">
                                         <i className="shop icon"></i>
                                     </div>
                                     <div className="visible content">Add To Cart</div>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -66,6 +72,7 @@ const ProductDetails = () => {
         </div>
     )
 }
+
 
 export default ProductDetails;
 

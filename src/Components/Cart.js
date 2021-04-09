@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Cart = () => {
-    return (
-        <div>
-            Welcome to Cart!
-        </div>
-    )
+  return (
+    <div>
+      <h1>Welcome to cart </h1>
+    </div>
+  )
 }
 
 export default Cart
